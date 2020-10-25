@@ -9,10 +9,3 @@ project ("Logtra" VERSION 1.0
 
 # Include sub-projects.
 add_subdirectory ("Logtra")
-
-project ("Sandbox" VERSION 1.0
-	               DESCRIPTION "Logging Sandbox"
-				   LANGUAGES CXX)
-
-
-add_subdirectory ("Sandbox")
