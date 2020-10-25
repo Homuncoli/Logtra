@@ -11,6 +11,17 @@ namespace Logtra {
 
 		Logger();
 		Logger(const std::string& context);
+		/*
+			Pattern: 
+
+			%m	->	message
+			%t	->	time in HH:MM:SS
+			%c	->	context
+			%l	->	line number
+			%f	->	file name
+			%bc	->	begin color
+			%ec	->	end color; is set automatically at the end of the log
+		*/
 		Logger(const std::string& context, const std::string& pattern);
 
 		void logSuccess (const std::string& message, const char* file, int line) const;
@@ -23,7 +34,7 @@ namespace Logtra {
 		void setStream(std::ostream* stream);
 
 	private:
-		std::string applyPattern(const std::string& message, const char* file, int line) const;
+		std::string applyPattern(const std::string& message, const char* file, int line, const char* color) const;
 
 		std::string pattern;
 		std::string context;

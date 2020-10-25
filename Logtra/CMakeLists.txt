@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.8)
 
 # Add source to this project's executable.
-add_library (Logtra STATIC  "include/Logtra.h" "src/Logger.h" "src/Logger.cpp")
-target_include_directories (Logtra PUBLIC "include" "src")
+add_library (${CMAKE_PROJECT_NAME} STATIC  "include/Logtra.h" "src/Logger.h" "src/Logger.cpp")
+target_include_directories (${CMAKE_PROJECT_NAME} PUBLIC "include" "src")
 
 # TODO: Add tests and install targets if needed.
